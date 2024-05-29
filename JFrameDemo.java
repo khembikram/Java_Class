@@ -1,6 +1,7 @@
 import javax.swing.SwingUtilities;
 
 import java.awt.Color;
+import java.awt.Font;
 
 import javax.swing.*;
 public class JFrameDemo {
@@ -9,6 +10,7 @@ public class JFrameDemo {
             SimpleFrame frame = new SimpleFrame();
             frame.setTitle("Demo Demo Demo");
             JButton button = new JButton("Click Me!");
+            button.setFont(new Font( "Arial", Font.BOLD,16));
             button.setBackground(Color.BLUE);
             button.setForeground(Color.WHITE);
             button.addActionListener(e->{
