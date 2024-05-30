@@ -1,3 +1,4 @@
+import java.awt.Image;
 import javax.swing.*;
 
 /**
@@ -14,5 +15,9 @@ public class SimpleFrame extends JFrame {
 
         // Using setBounds
         setBounds(500, 200, DEFAULT_WIDTH, DEFAULT_HEIGHT);
+        ImageIcon imgicon = new ImageIcon("C:/Users/sujan/OneDrive/Desktop/javaClass1/image.png");
+        Image img = imgicon.getImage();
+        setIconImage(img);
+        setResizable(false);
     }
 }
