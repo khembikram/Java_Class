@@ -23,5 +23,12 @@ class FrameDemo extends JFrame{
 
 
 public class JComponentDemo {
-    
+    public static void main(String[] args){
+        SwingUtilities.invokeLater(()->{
+            FrameDemo frame =  new FrameDemo();
+            frame.setTitle("JComponent in JFrame");
+            frame.setVisible(true);
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        });
+    }
 }
