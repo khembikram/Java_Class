@@ -12,8 +12,8 @@ class ComponentDemo extends JComponent {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
 
-        double leftX = 100;
-        double topY = 200;
+        double leftX = 50; 
+        double topY = 50;   
         double width = 200;
         double height = 150;
 
