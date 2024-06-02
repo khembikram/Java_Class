@@ -1,6 +1,5 @@
-
 import java.awt.*;
-import java.awt.geom.Ellipse2D;
+import java.awt.geom.*;
 import javax.swing.*;
 
 class ComponentDemo extends JComponent {
@@ -8,16 +7,17 @@ class ComponentDemo extends JComponent {
     private static final int DEFAULT_WIDTH = 400;
     private static final int DEFAULT_HEIGHT = 300;
 
-    protected void paintComponent(Graphics2D g) {
+    @Override
+    protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
 
-        double lefX = 50;
+        double leftX = 50;
         double topY = 50;
         double width = 200;
         double height = 150;
 
-        Ellipse2D ellipse = new Ellipse2D.Double(lefX, topY, width, height);
+        Ellipse2D ellipse = new Ellipse2D.Double(leftX, topY, width, height);
         g2.draw(ellipse);
     }
 
@@ -35,9 +35,10 @@ class FrameDemo extends JFrame {
     }
 }
 
-public class EllipseComponent {
+public class EllipseComponentDemo {
+
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(()->{
+        SwingUtilities.invokeLater(() -> {
             FrameDemo frame = new FrameDemo();
             frame.setTitle("Ellipse 2D Drawing");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
