@@ -1,14 +1,15 @@
-
 import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
 
 class ComponentDemo extends JComponent {
 
-    private  static  final  int  DEFAULT_WIDTH = 500;
-    private  static  final  int  DEFAULT_HEIGHT = 500;
+    private static final int DEFAULT_WIDTH = 400;
+    private static final int DEFAULT_HEIGHT = 300;
 
-    public void paintComponent(Graphics2D g) {
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
 
         double leftX = 100;
@@ -20,7 +21,8 @@ class ComponentDemo extends JComponent {
         g2.draw(rect);
     }
 
-    public Dimension getPreferedSize() {
+    @Override
+    public Dimension getPreferredSize() {
         return new Dimension(DEFAULT_WIDTH, DEFAULT_HEIGHT);
     }
 }
@@ -33,14 +35,14 @@ class FrameDemo extends JFrame {
     }
 }
 
-public class ReactangleComponentDemo {
+public class RectangleComponentDemo {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             FrameDemo frame = new FrameDemo();
             frame.setTitle("Rectangle 2D Drawing");
-            frame.setVisible(true);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setVisible(true);
         });
     }
 }
