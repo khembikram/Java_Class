@@ -1,5 +1,5 @@
-import javax.swing.*;
 import java.awt.*;
+import javax.swing.*;
 
 
 class ComponentDemo extends JComponent{
@@ -9,6 +9,7 @@ class ComponentDemo extends JComponent{
     public void pointComponent (Graphics g) {
         g.drawString("Displaying Information in a component", 20, 20);
     }
+    @Override
     public Dimension getPreferredSize(){
         return new Dimension(DEFAULT_WIDTH, DEFAULT_HEIGHT);
     }
