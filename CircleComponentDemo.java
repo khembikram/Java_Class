@@ -8,6 +8,7 @@ class ComponentDemo extends JComponent {
     private static final int DEFAULT_WIDTH = 400;
     private static final int DEFAULT_HEIGHT = 300;
 
+    @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
